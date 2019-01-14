@@ -5,6 +5,7 @@
 xmlhttp.onreadtstatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var mydata = JSON.parse(this.responseText);
+    window.alert(mydata.name);
   }
 };
 xmlhttp.open("GET","jtest.json",true);
@@ -13,7 +14,7 @@ xmlhttp.send();
   </head>
   <body>
     <script>
-      window.alert(mydata.name);
+      
     </script>
   </body>
 </html>
