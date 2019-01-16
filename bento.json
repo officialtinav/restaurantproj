@@ -30,6 +30,22 @@
        "fish sauce",
        "green onions"
         ]
+    },
+     {
+      "name":"spring rolls",
+      "price":10,
+      "sides":[
+       "peanut sauce",
+       "lettuce",
+       "fish sauce"
+        ]
+    },
+      {
+      "name":"bánh mì chả (pork rolled)",
+      "price":10,
+      "sides":[
+       "lettuce",
+        ]
     }
     ]
   
