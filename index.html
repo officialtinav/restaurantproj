@@ -3,6 +3,18 @@
    <link rel="stylesheet" href="vietRes.css">
  </head>
   <body>
+       <script>
+       var xmlhttp = new XMLHttpRequest();
+      
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var mydata = JSON.parse(this.responseText);
+    window.alert(mydata.food[1].name);
+  }
+};
+xmlhttp.open("GET","vietRes.json",true);
+xmlhttp.send();
+    </script>
    <script src="vietRes.js"></script>
     <h1 class="title">Pho Na</h1>
     <button id="checkout" onclick="checkout()">pay here</button>
@@ -11,6 +23,7 @@
 
     <div id="l1">
         <h2>pho</h2>
+        
         <div id="pic1">
          <input id="user1" type="number" min="0"> Quantity
          
@@ -39,17 +52,5 @@
         </div>
     </div>
 
-    <script>
-       var xmlhttp = new XMLHttpRequest();
-      
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var mydata = JSON.parse(this.responseText);
-    window.alert(mydata.food[1].name);
-  }
-};
-xmlhttp.open("GET","vietRes.json",true);
-xmlhttp.send();
-    </script>
   </body>
 </html>
