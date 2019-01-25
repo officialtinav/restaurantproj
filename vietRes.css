@@ -1,0 +1,101 @@
+.title,
+.bottom {
+  
+    text-align: center;
+}
+
+div {
+    width: 40vw;
+    height: 30vh;
+
+
+}
+
+body {
+  background-image: url("chalk.jpg");
+  color: white;
+  
+}
+
+h2 {
+  color: black;
+}
+
+
+button {
+  border: none;
+  padding: 7px;
+  border-radius: 4px;
+}
+
+button:hover {
+  border: none;
+  padding: 7px;
+  border-radius: 4px;
+  background-color: #cecece;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#l1 {
+  background-image: url("pho.jpg");
+  border-radius: 15px;
+  float:left;
+  margin-right: 17px;
+   padding: 20px 10px;
+}
+#l2 {
+  background-image: url("bunrieu.jpg");
+  border-radius: 15px;
+  float: left;
+  margin-bottom: -17px;
+   padding: 20px 10px;
+}
+
+#r1 {
+  background-image: url("thitnuong.jpg");
+  border-radius: 15px;
+  float: right;
+  margin-right: 17px;
+   padding: 20px 10px;
+}
+#r2 {
+  background-image: url("springrolls.jpg");
+  border-radius: 15px;
+  float: right;
+  margin-right: 17px;
+   padding: 20px 10px;
+}
+
+
+#p1,
+#p2,
+#p3 {
+    
+    margin: 0;
+    font-size: 10vh;
+   
+
+}
+
+input {
+    width: 25vw;
+    height: 15vh;
+    text-align: center;
+    font-size: 10vh;
+    margin: 5vh;
+
+
+}
+
+button {
+    float: right;
+    border-width: 0;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+#checkout {
+  font-size: 2vh;
+  position: absolute;
+  right: 100px;
+  background-color: white;
+}
