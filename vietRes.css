@@ -7,8 +7,6 @@
 div {
     width: 40vw;
     height: 30vh;
-
-
 }
 
 body {
@@ -41,7 +39,7 @@ button:hover {
   border-radius: 15px;
   float:left;
   margin-right: 17px;
-   padding: 20px 10px;
+  padding: 20px 10px;
 }
 #l2 {
   background-image: url("bunrieu.jpg");
@@ -60,6 +58,22 @@ button:hover {
 }
 #r2 {
   background-image: url("springrolls.jpg");
+  border-radius: 15px;
+  float: right;
+  margin-right: 17px;
+   padding: 20px 10px;
+}
+
+#l3 {
+  background-image: url("banhmi.jpeg");
+  border-radius: 15px;
+  float: left;
+  margin-bottom: -17px;
+   padding: 20px 10px;
+}
+
+#r3 {
+  background-image: url("banhxeo.png");
   border-radius: 15px;
   float: right;
   margin-right: 17px;

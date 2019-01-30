@@ -31,7 +31,7 @@
         ]
     },
      {
-      "name":"fresh spring rolls",
+      "name":"springrolls",
       "price":10,
       "sides":[
        "peanut sauce",
@@ -40,7 +40,14 @@
         ]
     },
       {
-      "name":"bánh mì chả (pork rolled)",
+      "name":"banhmi",
+      "price":10,
+      "sides":[
+       "lettuce",
+        ]
+    },
+     {
+      "name":"banhxeo",
       "price":10,
       "sides":[
        "lettuce",
