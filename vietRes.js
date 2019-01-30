@@ -2,27 +2,23 @@ var xmlhttp = new XMLHttpRequest(); //display json
 xmlhttp.onreadystatechange = function () { //i will do this when somthing is matched
     if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
         var mydata = JSON.parse(this.responseText); //json will be saved as mydata
-        var mapo = mydata.food[0].price; //get price
-        var mapoName = mydata.food[0].name; //get name
-      
-      
-
-        var pho = mydata.food[1].price; //get price
+    
+        var pho = mydata.food[0].price; //get price
         var phoName = mydata.food[1].name; //get name
 
-        var grilledpork = mydata.food[2].price; //get price
+        var grilledpork = mydata.food[1].price; //get price
         var grilledporkName = mydata.food[2].name; //get name
 
-        var crabsoup = mydata.food[3].price; //get price
+        var crabsoup = mydata.food[2].price; //get price
         var crabsoupName = mydata.food[3].name; //get name
 
-        var springrolls = mydata.food[4].price; //get price
+        var springrolls = mydata.food[3].price; //get price
         var springrollsName = mydata.food[4].name; //get name
 
-        var banhmi = mydata.food[5].price; //get price
+        var banhmi = mydata.food[4].price; //get price
         var banhmiName = mydata.food[5].name; //get name
         
-        var banhxeo = mydata.food[6].price; //get price
+        var banhxeo = mydata.food[5].price; //get price
         var banhxeoName = mydata.food[6].name; //get name
 
 
@@ -211,7 +207,7 @@ title.onclick = function(){ //enter password to make box appear again
     var password = prompt("Enter password");
     if (password == "item1") {
         user1.style.visibility = "visible";
-        document.getElementById('mapo').innerHTML = phoName + " - $" + pho;
+        document.getElementById('pho').innerHTML = phoName + " - $" + pho;
      }
       else{
           window.alert("Wrong password");
@@ -296,7 +292,7 @@ right3.onmouseout = function () { //if onmouseout, make input hidden
 }
 
 function checkout() { //jump to next page
-    location.href = "vietRest2.html";
+    location.href = "index.html";
 }
 var previous = null;
 var current = null;
