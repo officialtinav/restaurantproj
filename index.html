@@ -1,31 +1,20 @@
 <html>
- <head>
-  <link rel="stylesheet" href="vietRes.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js">
- </head>
-  <body>
-    <script>
-       var xmlhttp = new XMLHttpRequest();
-      
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var mydata = JSON.parse(this.responseText);
-    window.alert(mydata.food[0].price);
-  }
-};
-xmlhttp.open("GET","vietRes.json",true);
-xmlhttp.send();
-    </script>
-   <script src="vietRes.js"></script>
-      <h1 class="title">Pho Na</h1>
-    <button id="checkout" onclick="checkout()">pay here</button>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="vietRes.css">
+
+</head>
+
+    <h1 class="title">Pho Na</h1>
+    <div id="pay"><a href="vietRes2.html">pay here</a></div>
+    
     <hr>
     <h1 id="bottom">it's the time to treat yourself!!</h1>
 
     <div id="l1">
         <h2>pho</h2>
         <div id="pic1">
-         <input id="user1" type="number" min="0"> Amount
+         <input id="user1" type="number" min="0"> amount
          
         </div>
     </div>
@@ -33,7 +22,7 @@ xmlhttp.send();
     <div id="r1">
         <h2>grilled pork and tofu</h2>
         <div id="pic2">
-            <input id="user2" type="number" min="0"> Amount
+            <input id="user2" type="number" min="0"> amount
             
         </div>
     </div>
@@ -41,30 +30,55 @@ xmlhttp.send();
     <div id="l2">
         <h2>vermicelli crab meat soup</h2>
         <div id="pic3">
-            <input id="user3" type="number" min="0"> Amount
+            <input id="user3" type="number" min="0"> amount
         </div>
     </div>
 
     <div id="r2">
         <h2>fresh spring rolls</h2>
          <div id="pic4">
-            <input id="user4" type="number" min="0"> Amount
+            <input id="user4" type="number" min="0"> amount
         </div>
     </div>
     
 <div id="l3">
         <h2>banh mi</h2>
         <div id="pic5">
-            <input id="user5" type="number" min="0"> Amount
+            <input id="user5" type="number" min="0"> amount
         </div>
     </div>
     
 <div id="r3">
         <h2>banh xeo</h2>
         <div id="pic6">
-            <input id="user6" type="number" min="0"> Amount
+            <input id="user6" type="number" min="0"> amount
         </div>
     </div>
+   <script>
+var foodName = [];
+var foodPrice = [];
+
+var xmlhttp = new XMLHttpRequest(); //display json
+xmlhttp.onreadystatechange = function () { //i will do this when somthing is matched
+    if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
+        var mydata = JSON.parse(this.responseText); //json will be saved as mydata
+        console.log(mydata.food.length);
+        for (var i=0; i < mydata.food.length; i++) {
+            foodName.push(mydata.food[i].name);
+            foodPrice.push(mydata.food[i].price);
+            console.log(foodName);
+            console.log(foodPrice);
+        }
+
+};
+xmlhttp.open("GET", "vietRes.json", true);
+xmlhttp.send();
+}
+   
+   
+   
+   
+</script>
 </body>
 
 </html>

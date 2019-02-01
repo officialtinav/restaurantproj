@@ -100,16 +100,78 @@ input {
 
 
 }
+ #heading {
+   color: white;
+ }
 
-button {
-    float: right;
-    border-width: 0;
-    background-color: rgba(255, 0, 0, 0);
-}
-
-#checkout {
+#pay {
+  height: 30px;
+  width: 5%;
+  float: right;
+  border-width: 0;
+  border-radius: 5px;
   font-size: 2vh;
   position: absolute;
   right: 100px;
   background-color: white;
+  opacity:0.6;
+}
+
+#user1 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user2 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user3 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user4 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user5 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+#user1 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user2 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user3 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user4 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+#user6 {
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+a:link {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #b69fc6;
+  font-size: 16px;
 }
