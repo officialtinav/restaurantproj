@@ -3,8 +3,7 @@
 <head>
     <link rel="stylesheet" href="vietRes.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    
-
+  
 </head>
 
 <body>
@@ -125,8 +124,6 @@
             localStorage.setItem('viet2', transferData);
         }
         
-         var previous= null;
-        var current= null;
         setInterval(function() {
         $.getJSON("vietRes.json",function(json){
             current=JSON.stringify(json);
