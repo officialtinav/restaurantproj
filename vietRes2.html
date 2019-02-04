@@ -7,6 +7,7 @@
         #rectangle{
             background-color: #e8e8e8;
             width: 900px;
+           
             border-radius: 12px;
         }
         #overall{
@@ -19,9 +20,18 @@
         #tip{
             font-family: "Courier New";
         }
-     
+        #appreciation{
+            font-family: "Courier New";
+        }
+        
         #present {
           font-family: "Courier New";
+        }
+        
+        #add15 {
+          border: none;
+          padding: 7px;
+          border-radius: 4px;
         }
         </style>
     </head>
@@ -38,21 +48,22 @@
          <p id= "total"></p>
          <br>
          <br>
+        <h2 id= "appreciation">Thank You!</h2>
         </div>
 
         <script>
-        var x = localStorage.getItem('viet1');
-        document.getElementById('total').innerHTML = "Total is:  $"+x;
+        var x = localStorage.getItem('key1');
+        document.getElementById('total').innerHTML = "Total:  $"+x;
         
-        var y = localStorage.getItem('viet2');
-        document.getElementById('overall').innerHTML = y;
+        var y = localStorage.getItem('key2');
+        document.getElementById('total').innerHTML = y;
         function add15() {
             var tax15= x*1.15.toFixed(2);
-            document.getElementById('total').innerHTML= "Total is:  $"+tax15.toFixed(2);
+            document.getElementById('total').innerHTML= "Total:  $"+tax15.toFixed(2);
         }
         function add20() {
             var tax20= x*1.20.toFixed(2);
-            document.getElementById('total').innerHTML= "Total is:  $"+tax20.toFixed(2);
+            document.getElementById('total').innerHTML= "Total:  $"+tax20.toFixed(2);
         }
        
         </script>
