@@ -1,0 +1,146 @@
+.box {
+    float: left;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+button {
+  border: none;
+  padding: 7px;
+  border-radius: 4px;
+}
+
+button:hover {
+  border: none;
+  padding: 7px;
+  border-radius: 4px;
+  background-color: #feffc4;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+  body {
+  background-image: url("chalk.jpg");
+  color: white;
+   font-family: "Courier New", Courier;
+}
+
+h2 {
+  color: white;
+}
+
+#allOrders {
+   font-size: 20px;
+   color:white;
+}
+
+#label {
+  font-family: "Courier New", Courier;
+  color: white;
+}
+
+#title {
+  font-family: "Courier New", Courier;
+  text-align: center;
+  color: white;
+}
+
+#address {
+  text-align: center;
+  font-family: "Courier New", Courier;
+  font-size: 20px;
+  color: white;
+}
+
+
+#pho0 {
+  font-family: "Courier New", Courier;
+  background-image: url("https://flockler.com/thumbs/sites/192/pho_s600x600_c1266x739_l0x1047.jpg");
+  width: 250px;
+  height: 210px;
+  margin-right: 30px;
+  border-radius: 15px;
+  float: left;
+}
+
+
+
+#pork1 {
+  font-family: "Courier New", Courier;
+  width: 250px;
+  height: 210px;
+  border-radius: 15px;
+  margin-right: 30px;
+   background-image: url("https://farm6.static.flickr.com/5022/5875646873_a18f019c51_b.jpg");
+  float: left;
+}
+
+
+
+#crab2 {
+  font-family: "Courier New", Courier;
+  border-radius: 15px;
+  margin-right: 30px;
+   background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/6b/e1/59/bun-rieu.jpg");
+  float: left;
+  width: 250px;
+  height: 210px;
+}
+
+
+
+#spring3 {
+  font-family: "Courier New", Courier;
+  width: 250px;
+  height: 210px;
+  border-radius: 15px;
+  margin-right: 30px;
+ background-image: url("https://www.happyfoodstube.com/wp-content/uploads/2018/03/vegetarian-fresh-spring-rolls-image.jpg");
+  background-size: cover;
+  float: left;
+}
+
+
+
+#banhmi4 {
+  font-family: "Courier New", Courier, monospace;
+  background-size: auto 300px;
+  width: 250px;
+  height: 210px;
+  border-radius: 15px;
+  margin-right: 30px;
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/11/ac/45/b1/vietnamese-banh-mi-roll.jpg");
+}
+
+#banhxeo5 {
+  background-image: url("https://i.pinimg.com/originals/b7/89/97/b78997714fa00340da936448579e6ad0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 250px;
+  height: 210px;
+}
+
+#food5 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 210px;
+  margin-right: 30px;
+  background-image: url("https://i.pinimg.com/originals/b7/89/97/b78997714fa00340da936448579e6ad0.jpg");
+}
+
+#showPurchase {
+  width: 1350px;
+  height: auto;
+  color: #020311;
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/04/black-wood-texture-15204.jpg");
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+  border-radius: 12px;
+  float: left;
+}
+
+#taxTotal,
+#totalDisplay,
+#orderList,
+#yourOrder {
+  color: #cfd2d6;
+}
