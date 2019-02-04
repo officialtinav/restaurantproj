@@ -4,42 +4,42 @@
       "name": "Pho",
       "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
       "price": 10.00,
-      "ounces": 12
+     
     },
     
     {
       "name": "Grilled Pork",
-      "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
+      "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce", "lettuce"],
       "price": 7.00,
-      "ounces": 12
+     
     },
     
     {
       "name": "Crab Soup",
-     "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
+     "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce", "lettuce"],
       "price": 10.00,
-      "ounces": 12
+     
     },
     
     {
       "name": "Spring Rolls",
-     "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
+     "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce","fish sauce],
       "price": 5.00,
-      "ounces": 12
+      
     },
     
     {
       "name": "Banh Mi",
       "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
       "price": 7.50,
-      "ounces": 12
+      
     },
     
     {
       "name": "Banh Xeo",
-      "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce"],
+      "sides": ["lime"," bean sprouts","sriracha sauce","hoisin sauce","lettuce","fish sauce"],
       "price": 7.50,
-      "ounces": 12
+  
     }
     
     ]
