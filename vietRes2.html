@@ -45,7 +45,7 @@
         <p id= "tip">Add a tip</p>
             <button onclick= add15()>Add 15%</button>
             <button onclick= add20()>Add 20%</button>
-         <p id= "total"></p>
+         <p id= "totalV"></p>
          <br>
          <br>
         <h2 id= "appreciation">Thank You!</h2>
@@ -53,17 +53,17 @@
 
         <script>
         var x = localStorage.getItem('transfer1');
-        document.getElementById('total').innerHTML = "Total:  $"+x;
+        document.getElementById('totalV').innerHTML = "Total:  $"+x;
         
         var y = localStorage.getItem('transfer2');
-        document.getElementById('total').innerHTML = y;
+        document.getElementById('totalV').innerHTML = y;
         function add15() {
             var tax15= x*1.15.toFixed(2);
-            document.getElementById('total').innerHTML= "Total:  $"+tax15.toFixed(2);
+            document.getElementById('totalV').innerHTML= "Total:  $"+tax15.toFixed(2);
         }
         function add20() {
             var tax20= x*1.20.toFixed(2);
-            document.getElementById('total').innerHTML= "Total:  $"+tax20.toFixed(2);
+            document.getElementById('totalV').innerHTML= "Total:  $"+tax20.toFixed(2);
         }
        
         </script>
