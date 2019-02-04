@@ -7,7 +7,6 @@
         #rectangle{
             background-color: #e8e8e8;
             width: 900px;
-           
             border-radius: 12px;
         }
         #overall{
@@ -20,10 +19,7 @@
         #tip{
             font-family: "Courier New";
         }
-        #appreciation{
-            font-family: "Courier New";
-        }
-        
+     
         #present {
           font-family: "Courier New";
         }
@@ -42,22 +38,21 @@
          <p id= "total"></p>
          <br>
          <br>
-        <h2 id= "appreciation">Thank You!</h2>
         </div>
 
         <script>
         var x = localStorage.getItem('key1');
-        document.getElementById('total').innerHTML = "Total is...... $"+x;
+        document.getElementById('total').innerHTML = "Total is:  $"+x;
         
         var y = localStorage.getItem('key2');
         document.getElementById('overall').innerHTML = y;
         function add15() {
             var tax15= x*1.15.toFixed(2);
-            document.getElementById('total').innerHTML= "Total is...... $"+tax15.toFixed(2);
+            document.getElementById('total').innerHTML= "Total is:  $"+tax15.toFixed(2);
         }
         function add20() {
             var tax20= x*1.20.toFixed(2);
-            document.getElementById('total').innerHTML= "Total is...... $"+tax20.toFixed(2);
+            document.getElementById('total').innerHTML= "Total is:  $"+tax20.toFixed(2);
         }
        
         </script>
