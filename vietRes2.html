@@ -39,7 +39,7 @@
     <body background="http://www.whitecuisine.com/wp-content/uploads/2018/07/white_modern_cuisine_culinary-journey-high_quality.jpg">
         <div class= "center-div" id= "Rectangle">
         <h1 id="overall">Overall Summary</h1>
-        <p id= "present">Overall Summary</p>
+        
         <br>
         <br>
         <p id= "tip">Add a tip</p>
@@ -52,10 +52,10 @@
         </div>
 
         <script>
-        var x = localStorage.getItem('key1');
+        var x = localStorage.getItem('transfer1');
         document.getElementById('total').innerHTML = "Total:  $"+x;
         
-        var y = localStorage.getItem('key2');
+        var y = localStorage.getItem('transfer2');
         document.getElementById('total').innerHTML = y;
         function add15() {
             var tax15= x*1.15.toFixed(2);
