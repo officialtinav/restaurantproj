@@ -1,17 +1,243 @@
 <html>
+
 <head>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="vietRes.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
 
 </head>
 
-    <h1 class="title">Pho Na</h1>
-    <div id="pay"><a href="vietRes2.html">pay here</a></div>
-    
-    <hr>
-    <h1 id="bottom">it's the time to treat yourself!!</h1>
+<body>
+    <br>
+    <h1 id="title">Pho Na</h1>
+    <p id="address">"The real deal!" -Mr. Kam</p>
 
-    <div id="l1">
+    <br>
+    
+    <div class="allboxes">
+        <div class="box" id="pho0">
+           <p id="label">pho</p>
+            <p id="amount0"></p>
+            <input type="integer" id="quantity" placeholder="Insert amount">
+            <button onclick="purchase0()">purchase</button>
+        </div>
+    
+
+        <div class="box" id="pork1">
+           <p id="label">grilled pork</p>
+            <p id="amount1"></p>
+            <input type="integer" id="quantity1" placeholder="Insert amount">
+            <button onclick="purchase1()">purchase</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box" id="crab2">
+          <p id="label">crab soup</p>
+            <p id="amount2"></p>
+            <input type="integer" id="quantity2" placeholder="Insert amount">
+            <button onclick="purchase2()">purchase</button>
+        </div>
+   
+       
+        <div class="box" id="spring3">
+         <p id="label">fresh spring rolls</p>
+            <p id="amount3"></p>
+            <input type="integer" id="quantity3" placeholder="Insert amount">
+            <button onclick="purchase3()">purchase</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box" id="banhmi4">
+            <p id="label">banh mi</p>
+            <p id="amount4"></p>
+            <input type="integer" id="quantity4" placeholder="Insert amount">
+            <button onclick="purchase4()">purchase</button>
+        </div>
+   
+      
+        <div class="box" id="banhxeo5">
+          <p id="label">banh xeo</p>
+            <p id="amount5"></p>
+            <input type="integer" id="quantity5" placeholder="Insert amount">
+            <button onclick="purchase5()">purchase</button>
+        </div>
+    </div>
+
+    <div id="showPurchase">
+        <h1 id="allOrders">Total Purchase</h1>
+        <ul id="orderList"></ul>
+        <p id="totalDisplay"></p>
+        <p id="taxTotal"></p>
+        <button onclick="totalItems()">checkout</button>
+    </div>
+
+
+    <script>
+        var foodName = [];
+        var foodPrices = [];
+        var total = [];
+        var food0name;
+        var food0price;
+        
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var mydata = JSON.parse(this.responseText); //json file = mydata
+                for (var i = 0; i < mydata.food.length; i++) {
+                    foodName.push(mydata.food[i].name);
+                    foodPrices.push(mydata.food[i].price);
+                }
+               
+               
+                food0price = mydata.food[0].price;
+                document.getElementById('amount0').innerHTML = "$" + mydata.food[0].price + ".00";
+               
+                food1price = mydata.food[1].price;
+                document.getElementById('amount1').innerHTML = "$" + mydata.food[1].price + ".00";
+               
+                food2price = mydata.food[2].price;
+                document.getElementById('amount2').innerHTML = "$" + mydata.food[2].price + ".00";
+                
+                document.getElementById('amount3').innerHTML = "$" + mydata.food[3].price + ".00";
+              
+                food4price = mydata.food[4].price;
+                document.getElementById('amount4').innerHTML = "$" + mydata.food[4].price + ".00";
+              
+                food5price = mydata.food[5].price;
+                document.getElementById('amount5').innerHTML = "$" + mydata.food[5].price + ".00";
+               
+            }
+        };
+        xmlhttp.open("GET", "vietRes.json", true); //get json file
+        xmlhttp.send(); //implement to browser
+        
+       var order= [];
+        function totalItems() {
+            var all = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+                }
+            var pleaseWork= order.push("orderList");
+            location.href = "vietRes2.html";
+        }
+        
+         var previous= null;
+        var current= null;
+        setInterval(function() {
+        $.getJSON("vietRes.json",function(json){
+            current=JSON.stringify(json);
+            if (previous && current&& previous!==current) {
+      
+            location.reload();
+        }
+        previous==current;
+            });
+        }, 2000);
+        
+        function purchase0() {
+            //number of the amount
+            var qty = document.getElementById('quantity').value;
+            var subtotal = qty * foodPrices[0];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " - " + foodName[0]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            //local variable called all
+            var all = total.reduce(add, 0);
+            // return number from low/high and add them together
+            function add(a, b) {
+                return a + b;
+            }
+            //output in the total array; fix 2 decimal places
+            document.getElementById('total').innerHTML = "Total: $" + all.toFixed(2);
+        }
+       
+        function purchase1() {
+            var qty = document.getElementById('quantity1').value;
+            var subtotal = qty * foodPrices[1];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity1').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " - " + foodName[1]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var all = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('total').innerHTML = "Total: $" + all.toFixed(2);
+        }
+        
+        function purchase2() {
+            var qty = document.getElementById('quantity2').value;
+            var subtotal = qty * foodPrices[2];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity2').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " - " + foodName[2]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var all = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('total').innerHTML = "Total: $" + all.toFixed(2);
+        }
+    
+        function purchase3() {
+            var qty = document.getElementById('quantity3').value;
+            var subtotal = qty * foodPrices[3];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity3').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " - " + foodName[3]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var all = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('total').innerHTML = "Total: $" + all.toFixed(2);
+        }
+       
+        function purchase4() {
+            var qty = document.getElementById('quantity4').value;
+            var subtotal = qty * foodPrices[4];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity4').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " - " + foodName[4]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var all = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('total').innerHTML = "Total: $" + all.toFixed(2);
+        }
+       
+        function purchase5() {
+            var qty = document.getElementById('quantity5').value;
+            var subtotal = qty * foodPrices[5];
+            total.push(subtotal * 1.04712.toFixed(2));
+            document.getElementById('quantity5').value = "";
+            var node = document.createElement('li');
+            var textNode = document.createTextNode(qty + " - " + foodName[5]);
+            node.appendChild(textNode);
+            document.getElementById("orderList").appendChild(node);
+            var all = total.reduce(add, 0);
+            function add(a, b) {
+                return a + b;
+            }
+            document.getElementById('total').innerHTML = "Total: $" + all.toFixed(2);
+        }
+        
+        
+  /*  <div id="l1">
         <h2>pho</h2>
         <div id="pic1">
          <input id="user1" type="number" min="0"> amount
@@ -53,32 +279,10 @@
         <div id="pic6">
             <input id="user6" type="number" min="0"> amount
         </div>
-    </div>
-   <script>
-var foodName = [];
-var foodPrice = [];
+    </div> */
+  
+    </script>
 
-var xmlhttp = new XMLHttpRequest(); //display json
-xmlhttp.onreadystatechange = function () { //i will do this when somthing is matched
-    if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
-        var mydata = JSON.parse(this.responseText); //json will be saved as mydata
-        console.log(mydata.food.length);
-        for (var i=0; i < mydata.food.length; i++) {
-            foodName.push(mydata.food[i].name);
-            foodPrice.push(mydata.food[i].price);
-            console.log(foodName);
-            console.log(foodPrice);
-        }
-
-};
-xmlhttp.open("GET", "vietRes.json", true);
-xmlhttp.send();
-}
-   
-   
-   
-   
-</script>
 </body>
 
 </html>
